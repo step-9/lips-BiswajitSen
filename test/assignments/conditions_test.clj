@@ -150,7 +150,7 @@
       [:y-greater-than-z :z-greater-than-x] [2 4 3]
       [:x-greater-than-y :z-greater-than-x] [3 2 4])))
 
-(deftest ^:kaocha/pending zero-aliases-test
+(deftest ^:implemented zero-aliases-test
   (testing "zero like values return keywords"
     (are [x y] (= x (c/zero-aliases y))
       :zero         0
