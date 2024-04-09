@@ -17,14 +17,14 @@
   Falsy values(false and nil) return nil"
   {:level :easy
    :use   '[when-let]}
-  [x] (when-let [x x] x))
+  [x] (when-let [y x] y))
 
 (defn yudishtira
   "Only returns truthy values as themselves.
   Falsy values(false and nil) return :ashwathama"
   {:level :easy
-   :use   '[if-let]}
-  [x])
+   :use   '[if-let]} 
+  [x] (if-let [y x] y :ashwathama))
 
 (defn duplicate-first
   "Returns coll with the first element duplicated.
