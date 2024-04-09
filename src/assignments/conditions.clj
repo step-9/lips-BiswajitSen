@@ -75,7 +75,10 @@
   (order-in-words 2 3 4) => [:z-greater-than-x]"
   {:level :easy
    :use   '[cond-> conj]}
-  [x y z])
+  [x y z] (cond-> []
+           (> x y) (concat [:x-greater-than-y])
+           (> y z) (concat [:y-greater-than-z])
+           (> z x) (concat [:z-greater-than-x])))
 
 (defn zero-aliases
   "Given a zero-like value(0,[],(),#{},{}) should
