@@ -36,12 +36,16 @@
 
 (defn five-point-someone
   "Returns :chetan-bhagat if y is 5.
-  If x is 5 is returns :satan-bhagat.
+  If x is 5 returns :satan-bhagat.
   If x is greater than y it returns :greece
   Otherwise it returns :universe"
   {:level :easy
-   :use   '[cond]}
-  [x y])
+   :use   '[cond]} 
+  [x y] (cond
+         (= y 5) :chetan-bhagat
+         (= x 5) :satan-bhagat
+         (< y x) :greece
+         :else :universe))
 
 (defn conditions-apply
   "Given a collection of any length, returns:

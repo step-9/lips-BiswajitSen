@@ -49,7 +49,7 @@
     (is (= [0 0] (c/duplicate-first [0])))
     (is (= [0 1 0] (c/duplicate-first [0 1])))))
 
-(deftest ^:kaocha/pending five-point-someone-test
+(deftest ^:implemented five-point-someone-test
   (testing ":chetan-bhagat when y is 5"
     (are [x y] (= :chetan-bhagat (c/five-point-someone x y))
       0  5
