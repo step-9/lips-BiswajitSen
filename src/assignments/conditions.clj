@@ -3,14 +3,14 @@
 (defn safe-divide
   "Returns the result of x/y unless y is 0. Returns nil when y is 0"
   {:level :easy
-   :use   '[when-not zero?]}
-  [x y])
+   :use   '[when-not zero?]} 
+  [x y] (when-not (= y 0) (/ x y)))
 
 (defn informative-divide
   "Returns the result of x/y unless y is 0. Returns :infinite when y is 0"
   {:level :easy
    :use   '[if-not zero?]}
-  [x y])
+  [x y] (if-not (zero? y) (/ x y) :infinite))
 
 (defn harishchandra
   "Only returns truthy values as themselves.
