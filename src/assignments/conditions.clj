@@ -42,10 +42,10 @@
   {:level :easy
    :use   '[cond]} 
   [x y] (cond
-         (= y 5) :chetan-bhagat
-         (= x 5) :satan-bhagat
-         (< y x) :greece
-         :else :universe))
+          (= y 5) :chetan-bhagat
+          (= x 5) :satan-bhagat
+          (< y x) :greece
+          :else :universe))
 
 (defn conditions-apply
   "Given a collection of any length, returns:
@@ -56,9 +56,13 @@
   {:level      :medium
    :use        '[condp filter]
    :alternates '[if cond]}
-  [coll])
+  [coll] (cond
+          (= [1 3] (filter #((set [1 3]) %) coll)) :wonder-woman
+          (= [:a :b :c] (filter #((set [:a :b :c]) %) coll)) :durga
+          (= [[2 3] [4 5]] (filter #((set [[2 3] [4 5]]) %) coll)) :cleopatra
+          :else :tuntun))
 
-(defn repeat-and-truncate
+(defn repeat-and-truncate 
   "Given coll and options to repeat and truncate
   returns a collection that optionally repeats itself
   and is optionally truncated to the first n elements.
