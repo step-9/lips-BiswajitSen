@@ -38,7 +38,7 @@
     (is (zero? (c/yudishtira 0)))
     (is (true? (c/yudishtira true)))))
 
-(deftest ^:kaocha/pending duplicate-first-test
+(deftest ^:implemented duplicate-first-test
   (testing "empty coll"
     (is (nil? (c/duplicate-first [])))
     (is (nil? (c/duplicate-first '())))
